@@ -1,21 +1,35 @@
+/**
+ * @fileoverview Sample header.
+ */
+
+// External modules.
 import * as axios from 'axios';
 
-export const CountryActionTypes = { FETCH_CODES: 'FETCH_CODES' };
+// Configuration parameters.
+import { ROOT_URL } from '../config';
 
-export const fetchCodes = () => {
+// Constants.
+export const /* object.<string, string> */ SampleActionTypes = {
+  SAMPLE_ACTION_NAME: 'SAMPLE_ACTION_NAME',
+  SAMPLE_ERROR: 'SAMPLE_ERROR',
+}; // Sample action types.
+
+
+/**
+ * Sample action.
+ * @param {*} param - Sample param.
+ * @return {thunkDispatch} A thunked-dispatch callback to notify and update
+ * stores as soon as an asynchronous response is received.
+ * @export
+ */
+export const sampleAction = (param) => {
   return (dispatch) => {
-    axios.get(`${ROOT_URL}/countries/codes`)
+    axios.get(`${ROOT_URL}/sampleUrl`)
     .then(response => {
-      dispatch({
-        type: CountryActionTypes.FETCH_CODES,
-        payload: response.data,
-      });
+      dispatch({ type: SampleActionTypes.ACTION_NAME, payload: response.data });
     })
-    .catch(err => {
-      // dispatch({
-      //   type: GeometryActionTypes.CAR_GET_ERR,
-      // });
-      console.log(err);
+    .catch(error => {
+      dispatch({ type: SampleActionTypes.SAMPLE_ERROR, error });
     });
   };
 };

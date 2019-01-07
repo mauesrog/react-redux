@@ -1,6 +1,16 @@
+/**
+ * @fileoverview React Dumb Root Component.
+ */
+
+// External modules.
 import React from 'react';
 
-// example class based component (smart component)
+/**
+ * Stateless React root.
+ * @param {React.Component[]} children - Root descendants.
+ * @return {JSX} Root JSX code.
+ * @export
+ */
 const App = ({ children }) => ((<div>{children}</div>));
 
 export default App;

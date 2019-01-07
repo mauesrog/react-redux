@@ -1,11 +1,17 @@
+/**
+ * @fileoverview React Root Reducer.
+ */
+
+// External modules.
 import { combineReducers } from 'redux';
 
-import GeometryReducer from './geometry-reducer';
-import CountryReducer from './country-reducer';
+// Reducers.
+import SampleReducer from './sample-reducer';
 
-const appReducer = combineReducers({
-  geometries: GeometryReducer,
-  countries: CountryReducer,
-});
+// Constants
+const /* object.<string, reducer> */ appReducer = combineReducers({
+  sample: SampleReducer,
+}); // React root reducer.
+
 
 export default appReducer;

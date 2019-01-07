@@ -1,24 +1,24 @@
 {
-  "name": "clearskyclient-geotile-generator",
+  "name": "react-redux-template",
   "version": "0.0.0",
-  "description": "Displays the geometries that will be rasterized into geotiles",
+  "description": "Template to use with React and Redux.",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node_modules/.bin/webpack-dev-server --inline --hot",
     "build": "WEBPACK_ENV=production node_modules/.bin/webpack --optimize-minimize --progress --color",
-    "deploy": "npm run build; surge -p . -d tim-js-starter.surge.sh"
+    "deploy": "npm run build; surge -p . -d react-template.surge.sh"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dartmouth-cs52/js-starter.git"
+    "url": "git+https://github.com/mauesrog/react-redux.git"
   },
-  "author": "",
+  "author": "Mauricio Esquivel Rogel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dartmouth-cs52/js-starter/issues"
+    "url": "https://github.com/mauesrog/react-redux.git/issues"
   },
-  "homepage": "https://github.com/dartmouth-cs52/js-starter#readme",
+  "homepage": "https://github.com/mauesrog/react-redux.git#readme",
   "devDependencies": {
     "autoprefixer": "^6.3.7",
     "babel-core": "^6.10.4",

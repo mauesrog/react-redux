@@ -1,1 +1,1 @@
-React-redux template
+React-redux-eslint-babel-webpack template
